@@ -1,5 +1,6 @@
 HELP.md
 /target/
+*.patch
 
 ### IntelliJ IDEA ###
 .idea
