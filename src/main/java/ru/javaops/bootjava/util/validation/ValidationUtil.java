@@ -29,6 +29,12 @@ public class ValidationUtil {
             throw new IllegalRequestDataException("Entity with id=" + id + " not found");
         }
     }
+    public static <T> T checkExisted(T obj, int id) {
+        if (obj == null) {
+            throw new IllegalRequestDataException("Entity with id=" + id + " not found");
+        }
+        return obj;
+    }
 
     //  https://stackoverflow.com/a/65442410/548473
     @NonNull

@@ -73,7 +73,7 @@ public class AdminUserController extends AbstractUserController {
     @Transactional
     public void enable(@PathVariable int id, @RequestParam boolean enabled) {
         log.info(enabled ? "enable {}" : "disable {}", id);
-        User user = repository.getById(id);
+        User user = repository.getExisted(id);
         user.setEnabled(enabled);
     }
 }

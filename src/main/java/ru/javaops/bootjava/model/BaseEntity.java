@@ -1,6 +1,5 @@
 package ru.javaops.bootjava.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 import org.springframework.data.domain.Persistable;
@@ -30,7 +29,7 @@ public abstract class BaseEntity implements Persistable<Integer>, HasId {
         return id;
     }
 
-    @JsonIgnore
+    @Schema(hidden = true)
     @Override
     public boolean isNew() {
         return id == null;
